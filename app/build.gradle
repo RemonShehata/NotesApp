@@ -72,6 +72,9 @@ dependencies {
     implementation libs.androidx.room.runtime
     kapt libs.androidx.room.compiler
 
+    // Kotlin Extensions and Coroutines support for Room
+    implementation libs.androidx.room.ktx
+
     testImplementation libs.junit
     androidTestImplementation libs.androidx.test.ext.junit
     androidTestImplementation libs.espresso.core
