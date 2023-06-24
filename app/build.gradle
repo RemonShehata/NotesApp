@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlinKapt)
 }
 
 android {
@@ -60,6 +61,12 @@ dependencies {
     // Coroutines
     implementation libs.kotlinx.coroutines.core
     implementation libs.kotlinx.coroutines.android
+
+    //Dagger - Hilt
+    implementation libs.hilt.android
+    kapt libs.hilt.android.compiler
+    implementation libs.androidx.hilt.lifecycle.viewmodel
+    kapt "androidx.hilt:hilt-compiler:1.0.0"
 
     testImplementation libs.junit
     androidTestImplementation libs.androidx.test.ext.junit
